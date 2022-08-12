@@ -1,0 +1,159 @@
+
+<div class="container ">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 border p-4 shadow bg-light">
+       <div class="col-6">
+        <h3 class="fw-normal text-secondary fs-4 text-uppercase mb-4">
+          Buying Form
+        </h3>
+      </div>
+
+
+
+
+
+      <form [formGroup]="propertyForm">
+        <!-- <div class="row g-3">  -->
+          <!-- firstname  -->
+          <div class="mb-2">
+            <input
+              type="text"
+              formControlName="propertyname"
+              class="form-control"
+              placeholder="propertyname"
+            />
+          </div>
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['propertyname']?.touched ">
+            <div *ngIf="f?.['propertyname']?.errors?.['required']">
+              *Property Name is required
+            </div>
+          </div>
+          <!-- lastname  -->
+
+          <div class="mb-2">
+            <input
+              type="text"
+              formControlName="propertytype"
+              class="form-control"
+              placeholder="propertytype"
+            />
+          </div>
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['propertytype']?.touched ">
+            <div *ngIf="f?.['propertytype']?.errors?.['required']">
+              *Property Type is required
+            </div>
+          </div>
+
+          <!-- phone  -->
+          <div class="mb-2">
+            <input
+              type="text"
+              formControlName="description"
+              class="form-control"
+              placeholder="description"
+            />
+          </div>
+          <!-- validation  -->
+
+          <div class="text-danger" *ngIf=" f?.['description']?.touched">
+            <div *ngIf="f?.['description']?.errors?.['required']">
+              Description is required
+
+            </div>
+          </div>
+
+          <!-- email  -->
+
+          <div class="mb-2">
+            <input
+              type="text"
+              formControlName="address"
+              class="form-control"
+              placeholder="address"
+            />
+          </div>
+
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['address']?.touched ">
+            <div *ngIf="f?.['address']?.errors?.['required']">
+              Address is required
+
+          </div>
+             <!-- date  -->
+          <div class="mb-2">
+            <input
+              type="int"
+              formControlName="pricerange"
+              class="form-control"
+              placeholder="pricerange"
+            />
+          </div>
+              <!-- validation  -->
+              <div class="text-danger" *ngIf=" f?.['pricerange']?.touched ">
+                <div *ngIf="f?.['pricerange']?.errors?.['required']">
+                  *Price Range is required
+                </div>
+              </div>
+              <!-- time  -->
+          <div class="mb-2">
+            <input
+              type="text"
+              formControlName="state"
+              class="form-control"
+              placeholder="state"
+            />
+          </div>
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['state']?.touched ">
+            <div *ngIf="f?.['state']?.errors?.['required']">
+              *State is required
+            </div>
+          </div>
+          <div class="mb-2">
+            <input
+              type="text"
+              formControlName="sellername"
+              class="form-control"
+              placeholder="sellername"
+            />
+          </div>
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['sellername']?.touched ">
+            <div *ngIf="f?.['sellername']?.errors?.['required']">
+              *Seller Name is required
+            </div>
+          </div>
+          <div class="mb-2">
+            <input
+              type="tel"
+              formControlName="sellermobileno"
+              class="form-control"
+              placeholder="sellermobileno"
+            />
+          </div>
+          <!-- validation  -->
+          <div class="text-danger" *ngIf=" f?.['sellermobileno']?.touched ">
+            <div *ngIf="f?.['sellermobileno']?.errors?.['required']">
+              *Seller Mobile No is required
+            </div>
+          </div>
+
+          <div class="col-12 mt-5">
+            <button routerLink="/" routerLinkActive="active" type="submit" [disabled]="!propertyForm.valid" class="btn btn-primary " onclick="alert('Successfully Booked!')">
+              Book Property
+            </button>
+            <button routerLink="/search" routerLinkActive="active"
+              type="button"
+              class="btn btn-outline-secondary float-end me-2" onclick="alert('Appointment Cancelled')"
+            >
+              Cancel
+            </button>
+          </div>
+        <!-- </div> -->
+
+    </div>
+    </form>
+  </div>
+ </div>

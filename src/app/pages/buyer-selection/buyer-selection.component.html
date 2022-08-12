@@ -1,0 +1,46 @@
+<section class="vh-100 bg-image"  style="background-image: url('https://images.alphacoders.com/171/thumb-1920-171721.jpg');">
+
+  <div  bg-color :red class="container">
+    <div class="row">
+      <label class="col-form-label col-md-1">Search :</label>
+      <div class="col-md-5">
+        <input type="text" name="search"  [(ngModel)]="searchText" placeholder="Search state">
+      </div>
+
+          <h2>Property Details</h2>
+          <hr>
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Property Name</th>
+                <th>Property Type</th>
+                <th>Description </th>
+                <th>Address</th>
+                <th>price Range</th>
+                <th>state</th>
+                <th>Is Active</th>
+                 <th>seller Name</th>
+                 <th>seller MobileNo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of property$ | filter: searchText">
+                <td>{{d.propertyname}}</td>
+                <td>{{d.propertytype }}</td>
+                <td>{{d.description }}</td>
+                <td>{{d.address}}</td>
+                <td>{{d.pricerange}}</td>
+                <td>{{d.state}}</td>
+                <td>{{d.isactive}}</td>
+                <td>{{d.sellername }}</td>
+                <td>{{d.sellermobileno }}</td>
+                <td><button routerLink="/buying"  routerLinkActive="active" [disabled]="d.isactive=='No'" type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect">Buy your Property Now</button></td>
+              </tr>
+            </tbody>
+          </table>
+         </div>
+    </div>
+
+
+

@@ -1,0 +1,44 @@
+.active-link {
+  color: aquamarine;
+  font-weight: bold;
+  text-decoration: underline;
+  }
+  .banner
+  {
+    background-image:url(../../../assets/images/960589683.jpg) ;
+    height:700px;
+    background-position: center top;
+    background-size: cover;
+
+
+  }
+  .h1{
+    color: black;
+  }
+  .content
+{
+  top:30%;
+  left:20%;
+  position:absolute;
+  color: aquamarine;
+}
+.content h1
+{
+  color:#fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+.content a
+{
+  text-decoration: none;
+  background-color:#fff ;
+  color:rgb(218, 68, 45);
+  padding:10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.content a:hover
+{
+  background-color: rgb(178, 47, 14);
+  color:#fff;
+}
